@@ -6,13 +6,13 @@ body, html {
     align-items: center;
     background-color: #FFD700; /* Gold background */
     overflow: hidden;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
 }
 
 .container {
     text-align: center;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
     color: #FF1493; /* Deep pink text */
-    font-size: 50px;
+    font-size: 10vw; /* Font size relative to the viewport width */
     animation: fadeIn 2s ease-in-out;
 }
 
@@ -23,9 +23,8 @@ body, html {
 
 .confetti {
     position: fixed;
-    width: 10px;
-    height: 10px;
-    background-color: red;
+    width: 1vw; /* Width relative to the viewport width */
+    height: 1vw; /* Height relative to the viewport width */
     opacity: 0.7;
     top: 0;
     left: 50%;
@@ -36,5 +35,17 @@ body, html {
     to {
         transform: translateY(100vh) rotate(360deg);
         opacity: 0;
+    }
+}
+
+/* Responsive styles */
+@media (max-width: 600px) {
+    .container {
+        font-size: 15vw; /* Adjust font size for smaller screens */
+    }
+
+    .confetti {
+        width: 2vw;
+        height: 2vw;
     }
 }
