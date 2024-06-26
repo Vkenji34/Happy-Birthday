@@ -1,0 +1,40 @@
+body, html {
+    height: 100%;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #FFD700; /* Gold background */
+    overflow: hidden;
+}
+
+.container {
+    text-align: center;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    color: #FF1493; /* Deep pink text */
+    font-size: 50px;
+    animation: fadeIn 2s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.confetti {
+    position: fixed;
+    width: 10px;
+    height: 10px;
+    background-color: red;
+    opacity: 0.7;
+    top: 0;
+    left: 50%;
+    animation: fall 5s linear infinite;
+}
+
+@keyframes fall {
+    to {
+        transform: translateY(100vh) rotate(360deg);
+        opacity: 0;
+    }
+}
